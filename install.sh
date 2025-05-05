@@ -6,8 +6,11 @@ then
     exit 1
 fi
 
+echo "Installing polkit components"
+yay -S polkit polkit-gnome gnome-keyring libsecret libgnome-keyring
+
 echo "Installing core hyprland components"
-yay -S --needed kitty hyprland polkit hyprpaper hyprlock hypridle hyprcursor hyprpolkitagent hyprsunset xdg-desktop-portal-hyprland thunar wofi waybar wlogout swaync
+yay -S --needed uwsm kitty hyprland polkit hyprpaper hyprlock hypridle hyprcursor hyprpolkitagent hyprsunset xdg-desktop-portal-wlr xdg-desktop-portal-hyprland thunar wofi waybar wlogout swaync
 
 echo "Installing themes dependencies"
 yay -S --needed nwg-look qogir-icon-theme materia-gtk-theme illogical-impulse-bibata-modern-classic-bin
